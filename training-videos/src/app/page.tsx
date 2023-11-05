@@ -1,9 +1,19 @@
 "use client";
 import Image from "next/image";
-import "vanilla-tilt";
+import VanillaTilt from "vanilla-tilt";
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    VanillaTilt.init(document.querySelectorAll("#tilt-image") as any, {
+      max: 50,
+      scale: 1.2,
+      speed: 400,
+      "full-page-listening": true,
+    });
+  }, []);
+
   return (
     <main className="px-4 py-6 container">
       <section className="h-[50vh]">
@@ -21,6 +31,7 @@ export default function Home() {
             <Image
               src="/img/music-has-the-right-to-children.jpg"
               alt="A record player"
+              id="home-image-tilt"
               width={400}
               height={400}
               data-tilt
