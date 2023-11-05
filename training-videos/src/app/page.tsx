@@ -2,11 +2,11 @@
 import Image from "next/image";
 import VanillaTilt from "vanilla-tilt";
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 
 export default function Home() {
-  useEffect(() => {
-    VanillaTilt.init(document.querySelectorAll("#tilt-image") as any, {
+  useLayoutEffect(() => {
+    VanillaTilt.init(document.querySelectorAll("#home-image-tilt") as any, {
       max: 50,
       scale: 1.2,
       speed: 400,
@@ -34,9 +34,6 @@ export default function Home() {
               id="home-image-tilt"
               width={400}
               height={400}
-              data-tilt
-              data-tilt-max="50"
-              data-tilt-full-page-listening
               className="drop-shadow-glow"
             />
           </div>
