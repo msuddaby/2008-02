@@ -1,4 +1,3 @@
-import firebaseConfig from '@/lib/firebase/firebaseConfig.json'
 import admin from 'firebase-admin';
 import { ServiceAccount, getApps, initializeApp } from 'firebase-admin/app';
 import { serviceKey } from './serviceKey';
