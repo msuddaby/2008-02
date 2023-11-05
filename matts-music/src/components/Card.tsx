@@ -12,7 +12,7 @@ export default function Card({ album }: { album: Album }) {
   useEffect(() => {
     VanillaTilt.init(document.querySelectorAll("#tilt-image") as any, {
       max: 50,
-      scale: 1.2,
+      scale: 1.1,
       speed: 400,
       glare: true,
       "max-glare": 0.5,

@@ -35,7 +35,7 @@ export default async function AlbumPage({ params }: Props) {
   return (
     <>
       <section className="container">
-        <div className="bg-gradient-to-t from-zinc-950 to-zinc-900 rounded-xl px-12 py-6 flex items-center justify-center">
+        <div className="mx-6 bg-gradient-to-t from-zinc-950 to-zinc-900 rounded-xl px-12 py-6 flex items-center justify-center">
           <div className="flex items-center flex-col justify-center">
             <div className="mb-6">
               <Link href="/albums">
@@ -79,7 +79,7 @@ export default async function AlbumPage({ params }: Props) {
                     {genres.map((genre) => (
                       <li
                         key={genre}
-                        className="border-2 rounded-2xl py-1 px-3
+                        className="border-2 rounded-2xl py-1 px-3 
                         hover:border-2 hover:bg-gradient-to-l hover:border-zinc-950 hover:font-semibold from-cyan-300 to-fuchsia-600 hover:text-zinc-800  transition-all duration-300 ease-in-out cursor-pointer
                       "
                       >
@@ -105,7 +105,7 @@ export default async function AlbumPage({ params }: Props) {
                   <InfoBox header="Sales" body={album.sales.toString()} />
                 </div>
                 <div className="w-full">
-                  <button className="rounded-2xl border-4 border-zinc-700 w-full py-4 text-xl font-bold transition-all duration-300 hover:bg-zinc-500 ease-in-out">
+                  <button className="rounded-2xl text-black bg-zinc-200 w-full py-4 text-xl font-bold transition-all duration-300 hover:bg-zinc-500 ease-in-out">
                     Buy Now
                   </button>
                 </div>

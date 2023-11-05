@@ -8,7 +8,6 @@ export default function Home() {
   useLayoutEffect(() => {
     VanillaTilt.init(document.querySelectorAll("#home-image-tilt") as any, {
       max: 50,
-      scale: 1.2,
       speed: 400,
       "full-page-listening": true,
     });
@@ -16,7 +15,7 @@ export default function Home() {
 
   return (
     <main className="px-4 py-6 container">
-      <section className="h-[50vh]">
+      <section className="">
         <div className="flex flex-col lg:flex-row w-full h-full">
           <div className="flex justify-center items-center lg:w-[50%]">
             <h1 className="text-5xl font-semibold text-center p-12 leading-normal">
@@ -27,7 +26,7 @@ export default function Home() {
               record collection.
             </h1>
           </div>
-          <div className="lg:w-[50%] flex justify-center items-center">
+          <div className="h-full lg:w-[50%] flex justify-center items-center">
             <Image
               src="/img/music-has-the-right-to-children.jpg"
               alt="A record player"

@@ -18,7 +18,7 @@ export default async function EmployeePage() {
         </div>
       </div>
 
-      <div className="px-4 lg:px-0 grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-9">
+      <div className="px-4 mx-6 lg:px-0 grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-9">
         {albums.map((album: Album) => {
           album.date = new Date(album.release_date);
 
