@@ -35,7 +35,7 @@ export default function Home() {
           </div>
           <div className="h-full lg:w-[50%] flex justify-center items-center">
             <Image
-              src="/img/music-has-the-right-to-children.jpg"
+              src="/img/music-has-the-right-to-children.webp"
               alt="A record player"
               id="home-image-tilt"
               width={400}
