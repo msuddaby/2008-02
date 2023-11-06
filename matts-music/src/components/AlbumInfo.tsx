@@ -52,6 +52,7 @@ export default function AlbumInfo({ album }: Props) {
                                         width={400}
                                         height={400}
                                         quality={60}
+                                        priority={true}
                                         placeholder="blur"
                                         className="rounded-xl hover:shadow-lg hover:shadow-zinc-700 transition-shadow duration-100 ease-in-out object-cover"
                                     />
