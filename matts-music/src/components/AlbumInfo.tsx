@@ -51,6 +51,7 @@ export default function AlbumInfo({ album }: Props) {
                                         alt={`Album cover for "${album.album_title}" by ${album.artist}`}
                                         width={400}
                                         height={400}
+                                        quality={60}
                                         className="rounded-xl hover:shadow-lg hover:shadow-zinc-700 transition-shadow duration-100 ease-in-out object-cover"
                                     />
                                 </div>
