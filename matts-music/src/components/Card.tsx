@@ -38,6 +38,7 @@ export default function Card({ album }: { album: Album }) {
             fill
             quality={50}
             placeholder="blur"
+            blurDataURL="/img/blur.jpg"
             sizes="400px"
             className="rounded-xl absolute hover:shadow-lg hover:shadow-zinc-700 transition-shadow duration-100 ease-in-out object-cover overflow-hidden"
           />

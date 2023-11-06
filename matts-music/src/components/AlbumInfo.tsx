@@ -44,19 +44,22 @@ export default function AlbumInfo({ album }: Props) {
                     <div className="flex flex-col lg:flex-row">
                         <div>
                             <div className="w-full flex items-center justify-center">
-                                <div className="w-[256px] h-[256px] md:w-[400px] md:h-[400px] relative mb-3"
+                                <motion.div className="w-[256px] h-[256px] md:w-[400px] md:h-[400px] mb-3"
+                                    initial={{ opacity: 0, }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 3, delay: 1 }}
                                 >
                                     <Image
                                         src={`/img/${album.album_cover}`}
                                         alt={`Album cover for "${album.album_title}" by ${album.artist}`}
                                         width={400}
                                         height={400}
-                                        quality={60}
                                         priority={true}
                                         placeholder="blur"
+                                        blurDataURL="/img/blur.jpg"
                                         className="rounded-xl hover:shadow-lg hover:shadow-zinc-700 transition-shadow duration-100 ease-in-out object-cover"
                                     />
-                                </div>
+                                </motion.div>
                             </div>
                             <div className="mb-3 text-center text-zinc-400">
                                 <p className="text-sm font-light">

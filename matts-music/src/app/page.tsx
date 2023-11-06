@@ -41,6 +41,8 @@ export default function Home() {
               width={400}
               height={400}
               placeholder="blur"
+              blurDataURL="/img/blur.jpg"
+              priority={true}
               className="drop-shadow-glow"
             />
           </div>
