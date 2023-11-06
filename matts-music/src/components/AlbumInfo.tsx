@@ -29,14 +29,14 @@ export default function AlbumInfo({ album }: Props) {
                         <motion.h3 className="text-2xl font-light text-zinc-400 tracking-widest whitespace-break-spaces"
                             initial={{ opacity: 0, }}
                             animate={{ opacity: 1 }}
-                            transition={{ duration: 1.5 }}
+                            transition={{ duration: 2, delay: 0.5 }}
                         >
                             {album.artist.toUpperCase()}
                         </motion.h3>
                         <motion.h4 className="text-6xl font-semibold whitespace-break-spaces"
                             initial={{ opacity: 0, }}
                             animate={{ opacity: 1 }}
-                            transition={{ duration: 1.5, delay: 0.5 }}
+                            transition={{ duration: 3, delay: 1 }}
                         >
                             {album.album_title}
                         </motion.h4>
