@@ -40,6 +40,7 @@ export default function Home() {
               id="home-image-tilt"
               width={400}
               height={400}
+              placeholder="blur"
               className="drop-shadow-glow"
             />
           </div>
