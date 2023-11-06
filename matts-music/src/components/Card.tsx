@@ -1,5 +1,6 @@
 "use client";
 import { Album } from "@/lib/data/types";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
@@ -20,9 +21,13 @@ export default function Card({ album }: { album: Album }) {
   }, []);
 
   return (
-    <div
+    <motion.div
+
       key={album.id}
       className="bg-gradient-to-t from-zinc-950 to-zinc-900 rounded-xl px-3 py-6 flex flex-col items-center justify-center"
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
     >
       <div className="w-[256px] h-[256px] md:w-[400px] md:h-[400px] relative mb-3">
         <Link href={`/album/${album.id}`}>
@@ -32,7 +37,7 @@ export default function Card({ album }: { album: Album }) {
             id={`tilt-image`}
             fill
             sizes="400px"
-            className="rounded-xl absolute hover:shadow-lg hover:shadow-zinc-700 transition-shadow duration-100 ease-in-out object-cover"
+            className="rounded-xl absolute hover:shadow-lg hover:shadow-zinc-700 transition-shadow duration-100 ease-in-out object-cover overflow-hidden"
           />
         </Link>
       </div>
@@ -73,6 +78,6 @@ export default function Card({ album }: { album: Album }) {
           <span>{album.description}</span>
         )}
       </p>
-    </div>
+    </motion.div>
   );
 }

@@ -9,7 +9,7 @@ export default function Footer() {
             &copy; 2023 Matt&apos;s Albums
           </p>
           <div className="flex justify-center gap-2 text-white my-6">
-            <a target="_blank" href="https://github.com/msuddaby">
+            <a target="_blank" href="https://github.com/msuddaby/2008-02">
               <GitHubIcon className="w-[64px] h-[64px]" />
             </a>
           </div>

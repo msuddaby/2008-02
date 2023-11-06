@@ -3,6 +3,7 @@ import Image from "next/image";
 import VanillaTilt from "vanilla-tilt";
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
 import { useLayoutEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function Home() {
   useLayoutEffect(() => {
@@ -16,7 +17,13 @@ export default function Home() {
   return (
     <main className="px-4 py-6 container">
       <section className="">
-        <div className="flex flex-col lg:flex-row w-full h-full">
+        <motion.div
+          className="flex flex-col lg:flex-row w-full h-full"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+
+        >
           <div className="flex justify-center items-center lg:w-[50%]">
             <h1 className="text-5xl font-semibold text-center p-12 leading-normal">
               My super awesome{" "}
@@ -36,9 +43,14 @@ export default function Home() {
               className="drop-shadow-glow"
             />
           </div>
-        </div>
+        </motion.div>
       </section>
-      <section className="py-6">
+      <motion.section
+        className="py-6"
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.5 }}
+      >
         <h4 className="text-4xl font-semibold text-center p-12 leading-relaxed">
           What is this place?
         </h4>
@@ -51,8 +63,11 @@ export default function Home() {
           anyone in the world. I can also share my passion for music with anyone
           who&apos;s interested.
         </p>
-      </section>
-      <section className="py-6">
+      </motion.section>
+      <motion.section className="py-6"
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.5 }}>
         <h4 className="text-4xl font-semibold text-center p-12 leading-relaxed">
           Where did you get all these records?
         </h4>
@@ -66,8 +81,11 @@ export default function Home() {
           electronic music, the majority of my collection reflects this genre.
           However, you&apos;ll also find some strange additions...
         </p>
-      </section>
-      <section>
+      </motion.section>
+      <motion.section
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.5 }}>
         <h4 className="text-4xl font-semibold text-center p-12 leading-relaxed">
           How can I buy your records?
         </h4>
@@ -80,8 +98,12 @@ export default function Home() {
           will then ship your records to you, and you&apos;ll receive a tracking
           number via email.
         </p>
-      </section>
-      <section>
+      </motion.section>
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1 }}
+      >
         <h4 className="text-4xl font-semibold text-center pt-12 pb-6">
           <span>
             <ErrorOutlineIcon className="w-[32px] h-[32px]" />
@@ -93,7 +115,7 @@ export default function Home() {
           is real, the records are not for sale. This website is for
           demonstration purposes only.
         </p>
-      </section>
+      </motion.section>
     </main>
   );
 }
