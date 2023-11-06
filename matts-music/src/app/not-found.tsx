@@ -13,9 +13,9 @@ export default function NotFound() {
                         </h1>
 
                         <h2 className="text-3xl font-semibold text-center pt-12 leading-normal">
-                            Cleverly done, Mr. Freeman, but you're not supposed to be here.
+                            Cleverly done, Mr. Freeman, but you&apos;re not supposed to be here.
                         </h2>
-                        <p>As a matter of fact, you're not. Get back to {" "}
+                        <p>As a matter of fact, you&apos;re not. Get back to {" "}
                             <Link href="/" className="border-b border-zinc-700 hover:text-zinc-400">
                                 where you belong
                             </Link>
