@@ -4,6 +4,7 @@ import { getAlbum, getAlbums } from "@/lib/data/albums";
 import { Album } from "@/lib/data/types";
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 type Props = {
   params: {
@@ -26,9 +27,7 @@ export default async function AlbumPage({ params }: Props) {
   const album = await getAlbum(params.id);
 
   if (!album) {
-    return {
-      notFound: true,
-    };
+    return notFound();
   }
 
 

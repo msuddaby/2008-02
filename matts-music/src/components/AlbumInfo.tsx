@@ -14,11 +14,8 @@ export default function AlbumInfo({ album }: Props) {
 
     return (
         <>
-            <motion.div
+            <div
                 className="mx-6 bg-gradient-to-t from-zinc-950 to-zinc-900 rounded-xl px-12 py-6 flex items-center justify-center"
-                initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
             >
                 <div className="flex items-center flex-col justify-center">
                     <div className="mb-6">
@@ -29,17 +26,26 @@ export default function AlbumInfo({ album }: Props) {
                         </Link>
                     </div>
                     <div className="mb-16 text-center">
-                        <h3 className="text-2xl font-light text-zinc-400 tracking-widest whitespace-break-spaces">
+                        <motion.h3 className="text-2xl font-light text-zinc-400 tracking-widest whitespace-break-spaces"
+                            initial={{ opacity: 0, }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 1.5 }}
+                        >
                             {album.artist.toUpperCase()}
-                        </h3>
-                        <h4 className="text-6xl font-semibold whitespace-break-spaces">
+                        </motion.h3>
+                        <motion.h4 className="text-6xl font-semibold whitespace-break-spaces"
+                            initial={{ opacity: 0, }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 1.5, delay: 0.5 }}
+                        >
                             {album.album_title}
-                        </h4>
+                        </motion.h4>
                     </div>
                     <div className="flex flex-col lg:flex-row">
                         <div>
                             <div className="w-full flex items-center justify-center">
-                                <div className="w-[256px] h-[256px] md:w-[400px] md:h-[400px] relative mb-3">
+                                <div className="w-[256px] h-[256px] md:w-[400px] md:h-[400px] relative mb-3"
+                                >
                                     <Image
                                         src={`/img/${album.album_cover}`}
                                         alt={`Album cover for "${album.album_title}" by ${album.artist}`}
@@ -77,7 +83,8 @@ export default function AlbumInfo({ album }: Props) {
                             <h2 className="text-3xl font-light border-b border-zinc-400">
                                 DESCRIPTION
                             </h2>
-                            <p className="p-2 mb-3 text-center text-zinc-400">
+                            <p className="p-2 mb-3 text-center text-zinc-400"
+                            >
                                 <span>{album.description}</span>
                             </p>
                             <h2 className="text-3xl font-light border-b border-zinc-400 mb-6">
@@ -104,7 +111,7 @@ export default function AlbumInfo({ album }: Props) {
                         </p>
                     </div>
                 </div>
-            </motion.div>
+            </div>
         </>
     )
 }

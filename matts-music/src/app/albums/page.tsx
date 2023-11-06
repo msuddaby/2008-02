@@ -10,10 +10,10 @@ export default async function EmployeePage() {
       <div className="flex flex-col items-center text-center justify-center">
         <div className="pb-4 text-center">
           <p className="text-2xl">
-            Here&apos;s a strange list of my favourite albums.
+            Here&apos;s a list of my current albums.
           </p>
           <p className="text-sm font-light">
-            Hover over the covers to see them in action ;&gt;
+            Hover over the covers to see them in action, or click on one to purchase it!
           </p>
         </div>
       </div>
