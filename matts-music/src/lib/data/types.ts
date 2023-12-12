@@ -14,4 +14,5 @@ export interface Album {
     producer: string
     songwriters: string
     description: string
+    price: string
 }
