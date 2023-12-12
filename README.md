@@ -3,9 +3,11 @@
 This project is a demonstration of my capabilities with Next.js 13, React, TypeScript, Stripe, and Firebase.
 
 ## Getting Started
+
 First, set the environment variables for the real-time database through Firebase.
 
 Required variables:
+
 ```env
 TYPE=
 PROJECT_ID=
@@ -19,6 +21,7 @@ AUTH_PROVIDER_CERT_URL=
 CLIENT_CERT_URL=
 UNIVERSE_DOMAIN=
 DATABASE_URL=
+STRIPE_SECRET_KEY=
 ```
 
 Next, run the development server:
@@ -36,6 +39,7 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 Directory listing
+
 ```
 / Home
 |-/albums - Album List
